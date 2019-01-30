@@ -1,0 +1,86 @@
+@media only screen and (min-width: 768px) and (orientation: portrait),
+only screen and (min-width: 1024px) {
+
+    .container {
+        grid-template-rows: 50px auto 50px;
+    }
+
+    /* Menu */
+    .menu-container {
+        padding-top: 1rem;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 4rem;
+    }
+
+    .nav-items {
+        margin-right: 4rem;
+        float: right;
+    }
+
+    .nav-item { 
+        margin-right: 1rem;
+        padding-bottom: 1px;
+        color: steelblue;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .nav-item:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        bottom: 0;
+        background: rebeccapurple;
+        height: 1px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    
+    .nav-item:hover:before, .nav-item:focus:before, .nav-item:active:before {
+        left: 0;
+        right: 0;
+    }
+
+    #nav-learn-more {
+        color: rebeccapurple;
+        margin-right: 0;
+        margin-left: 1rem;
+        border: 1px solid rebeccapurple;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 40px;
+    }
+    
+    #nav-learn-more:hover, #nav-learn-more:active, #nav-learn-more:focus {
+        color: darkgoldenrod;
+        border-color: darkgoldenrod;
+        transition: 0.3s ease-in-out; 
+    }
+
+    /* Content */
+    .content-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "b w"
+            "b w"
+            "b w"
+            "b w"
+            "c c";
+    }
+}

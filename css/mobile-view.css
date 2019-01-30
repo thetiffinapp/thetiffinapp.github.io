@@ -1,0 +1,41 @@
+@media only screen and (max-width: 1023px) {
+
+    .container {
+        grid-template-areas:
+            "h"
+            "m"
+            "f";
+        grid-template-rows: 10vh 80vh 10vh;
+    }
+
+    .content-container {
+        width: 100%;
+        grid-template-areas:
+            "b"
+            "w"
+            "c";
+        grid-template-rows: 10vh 70vh 20vh;
+    }
+
+    @media (orientation: landscape) {
+        .container {
+            grid-template-rows: 10vw 80vw 10vw;
+        }
+
+        .content-container {
+            grid-template-rows: 10vw 70vw 20vw; 
+        }
+    }
+
+    .menu-container {
+        padding: 1rem;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    #hamburger {
+        float: right;
+    }
+}
