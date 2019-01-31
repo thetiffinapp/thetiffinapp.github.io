@@ -16,14 +16,9 @@ a { text-decoration: none; }
 
 .logo { float: left; }
 
-/* Content */
-.content {
-    height: 100%;
-    display: grid;
-    grid-gap: 3px;
-}
-
 .container {
+    display: grid;
+    height: 100%;
     grid-template-areas:
     "h"
     "m"
@@ -33,10 +28,10 @@ a { text-decoration: none; }
 .content-container {
     grid-area: m;
     display: grid;
+    grid-gap: 3px;
 }
 
 .blurb {
-    height: auto;
     grid-area: b;
 }
 
